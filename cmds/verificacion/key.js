@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, DiscordAPIError } = require('discord.js');
 const codeVerificationRB = require('../../util/codigos.js');
 const conteo = require('../../databases/models/contador.js');
 
@@ -34,6 +34,10 @@ module.exports = {
         .setTimestamp()
         .setColor("BLUE")
 
-        message.author.send(embed)
+        message.author.send(embed).catch(e => message.channel.send(new MessageEmbed()
+        .setDescription(`<:esperando:755652706873507860> **¡Hey!** ${message.author} activa los mensajes directos por favor. Necesito enviarte el código de seguridad a través de esa vía.`)
+        .setImage("https://media.discordapp.net/attachments/646072711797538818/782428557078691870/unknown.png")
+        .setColor("RED")
+        ));
     }
 }

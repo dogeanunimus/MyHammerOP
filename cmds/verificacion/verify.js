@@ -70,7 +70,7 @@ module.exports = {
             
             let estado = await status.json();            
 
-            let existe = await RobloxUser.findOne({nombreCuenta: `${username}`})
+            let existe = await RobloxUser.findOne({nombreCuenta: `${username.toLowerCase() || username.toUpperCase()}`})
             if (existe) {
                 return message.channel.send(new Discord.MessageEmbed()
                 .setDescription("<:error:755652678285131848> **¡Hey!** Esta no es tu cuenta de roblox. El nombre de jugador que acabas de agregar ya está registrado. Agrega tu cuenta.")
