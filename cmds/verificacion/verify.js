@@ -10,7 +10,7 @@ module.exports = {
         nombre: "verify",
         alias: ["v"],
         categoria: "Verificación",
-        descripcion: "Comando de verificacion en roblox con MongoDB"
+        descripcion: "Comando de verificacion en roblox con Mongoose."
     },
     
     run: async (client, message, args, guild) => {

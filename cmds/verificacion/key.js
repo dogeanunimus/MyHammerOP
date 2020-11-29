@@ -8,7 +8,7 @@ module.exports = {
     config: {
         nombre: "key",
         alias: ["k"],
-        descripcion: "Comando para poder generar un código y poder verificarte.",
+        descripcion: "Comando para poder generar un código y verificarte.",
         categoria: "Verificación."
     },
 
