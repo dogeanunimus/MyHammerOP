@@ -8,9 +8,9 @@ const conteo = require('../../databases/models/contador.js');
 module.exports = {
     config: {
         nombre: "verify",
-        alias: ["v"],
+        alias: ["vy"],
         categoria: "Verificación",
-        descripcion: "Comando de verificacion en roblox con Mongoose."
+        descripcion: "Comando de verificación ROBLOX"
     },
     
     run: async (client, message, args, guild) => {

@@ -7,7 +7,7 @@ module.exports = {
         nombre: "prefix",
         alias: ["set"],
         categoria: "configuracion",
-        descripcion: "Este comando sirve para modificar el prefix del bot."
+        descripcion: "Este comando sirve para modificar el prefix del bot"
     },
 
     run: async (client, message, args) => {

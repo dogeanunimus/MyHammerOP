@@ -14,7 +14,7 @@ module.exports = {
     
     let commandfile = client.commands.get(args[0]) || client.commands.get(client.alias.get(args[0]))
     if(!commandfile) {
-        return message.channel.send("Ese comando no existe.")
+        return;
     }
 
     const embed = new Discord.MessageEmbed()

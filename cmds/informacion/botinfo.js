@@ -9,7 +9,6 @@ module.exports = {
 		alias: ["bot"],
 		descripcion: "Comando para mostrar la información del bot.",
 		categoria: "Información",
-		uso: "Modo de uso solo es ejecutar `/botinfo` o `/bot`"
 	},
 
 	run: async (client, message, args, guild) => {
