@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
     config: {
         nombre: "lock",
-        alias: "cerrar",
+        alias: ["cerrar"],
         categoria: "Moderacion",
         descripcion: "Cierra un canal",
     },

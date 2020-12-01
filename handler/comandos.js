@@ -32,6 +32,7 @@ module.exports = (client) => {
          "verificacion",
          "testscommands",
          "configuracion",
+         "desarrollo",
         ].forEach(x => load(x));
   
       console.log(table.toString());
