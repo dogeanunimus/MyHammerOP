@@ -59,7 +59,7 @@ module.exports = {
     }    
 
 
-		const badgesuser = autor.user.flags != 0 ? autor.user.flags.toArray().map(b => BADGES[b]).join(' • ') : "**No tiene medallas**"
+		const badgesuser = autor.user.flags != 0 ? autor.user.flags.toArray().map(b => BADGES[b]).join(' | ') : "**No tiene medallas**"
 
 
 		 function formatDate (template, date) {
