@@ -1,8 +1,7 @@
-const snipe = require('../../cmds/moderacion/snipe.js');
 const snipeDB = require('../../databases/models/snipemessages.js');
 module.exports = async (client, message) => {
 
-  let mensaje = await snipeDB.findOne({canal: message.channel.id}, {mensaje: message.content}, {autor: message.author.username})
+  let mensaje = await snipeDB.findOne({canal: message.channel.id}).exec();
   
   if (mensaje) {
 
