@@ -15,8 +15,7 @@ module.exports = {
             return message.channel.send("¡Ningun mensaje borrado en este canal");
         } else {
         
-            message.channel.send("```js\n👤 Autor del mensaje: [ "+canal.autor+" ]\n📨 Antes: [ "+canal.antes+" ]\n📩 Despues: [ "+canal.despues+" ]```");
-
+            message.channel.send("```js\n[👤] Autor del mensaje: "+canal.autor+"\n[📨] Antes: "+canal.antes+"\n[📩] Despues: "+canal.despues+"```").catch(e => message.channel.send("No puedo mostrar el mensaje editado que solicitaste."));
         }
     }
 }

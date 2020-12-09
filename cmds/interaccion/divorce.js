@@ -1,6 +1,5 @@
 const { MessageEmbed } = require('discord.js');
 const marryDB = require('../../databases/models/marryDB.js');
-const marry = require('./marry.js');
 
 module.exports = {
     config: {

@@ -7,7 +7,7 @@ module.exports = {
 	config: {
 		nombre: "botinfo",
 		alias: ["bot"],
-		descripcion: "Comando para mostrar la información del bot.",
+		descripcion: "Comando para mostrar la información del bot",
 		categoria: "Información",
 	},
 

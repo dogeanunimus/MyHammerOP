@@ -11,6 +11,6 @@ mongoose.connect(uri, {
 });
 
 mongoose.connection.on('open', _ => {
-    console.log('Me he conectado correctamente a la base de datos', uri);
+    console.log('Me he conectado correctamente a la base de datos');
 })
 

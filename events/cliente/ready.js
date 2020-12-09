@@ -1,6 +1,6 @@
 module.exports = async client => {
 
-      console.log(`¡Todos los comandos fueron cargados correctamente, MyHammerOP se ha iniciado correctamente`);
+console.log(`¡Todos los comandos fueron cargados correctamente, MyHammerOP se ha iniciado correctamente`);
 
     client.user.setPresence({
         status: "online",

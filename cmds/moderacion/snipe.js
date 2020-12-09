@@ -18,10 +18,10 @@ module.exports = {
 
       const embed = new MessageEmbed()
       .setAuthor(`Autor: ${snipe.autor}`, message.author.displayAvatarURL({dynamic: true}))
-      .setDescription(snipe.mensaje)
+      .setDescription(snipe.mensaje !== "" ? snipe.mensaje : "No puedo mostrar el mensaje solicitado porque es una imagen.")
       .setColor("BLUE")
       .setFooter(client.user.tag, client.user.displayAvatarURL())
 
-      message.channel.send(embed);
+      message.channel.send(embed).catch(e => message.channel.send("No puedo mostrar este mensaje."))
     }
 }

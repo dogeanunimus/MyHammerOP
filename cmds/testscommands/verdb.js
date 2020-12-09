@@ -4,7 +4,7 @@ const snipeDB = require('../../databases/models/snipemessages.js');
 module.exports = {
     config: {
         nombre: "verdb",
-        alias: ["si"]
+        alias: ["verbase"]
     },
 
     run: async (client, message, args) => {

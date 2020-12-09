@@ -20,7 +20,8 @@
     "node-fetch": "^2.6.1",
     "os": "^0.1.1",
     "request": "^2.88.2",
-    "sourcebin": "^3.2.5"
+    "sourcebin": "^3.2.5",
+    "unofficial-amazon-search": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {

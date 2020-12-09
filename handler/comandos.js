@@ -35,6 +35,7 @@ module.exports = (client) => {
          "desarrollo",
          "imagenes",
          "interaccion",
+         "roblox",
         ].forEach(x => load(x));
   
       console.log(table.toString());
