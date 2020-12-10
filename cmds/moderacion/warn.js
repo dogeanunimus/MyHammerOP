@@ -2,7 +2,6 @@ const moment = require("moment")
 require("moment-duration-format");
 
 const fecha = moment(new Date()).format("DD/MM/YYYY"); 
-const db = require('quick.db');
 const Discord = require('discord.js')
 
 module.exports = {

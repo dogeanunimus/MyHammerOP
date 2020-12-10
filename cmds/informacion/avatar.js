@@ -15,10 +15,26 @@ module.exports = {
             || message.guild.members.cache.find(m => m.displayName.toLowerCase() === args.join(" ").toLowerCase()) 
             || message.guild.members.cache.find(m => m.user.tag.toLowerCase().includes(args.join(" ").toLowerCase())) 
             || message.guild.members.cache.find(m => m.displayName.toLowerCase().includes(args.join(" ").toLowerCase()))
-            || message.member;            
-              
+                       
+            if (!usuario) {
+                const embed = new MessageEmbed()
+                .setImage(message.member.user.displayAvatarURL({dynamic: true, size: 1024}))
+                .setColor(message.member.displayHexColor)
+                return message.channel.send(embed)
+            } else {
+                const embed = new MessageEmbed()
+                .setImage(usuario.user.displayAvatarURL({dynamic: true, size: 1024}))
+                .setColor(usuario.displayHexColor)
+                return message.channel.send(embed)
 
-    /*const usuario = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find((m) => m.user.tag.toLowerCase() === args.join(" ").toLowerCase()) || message.guild.members.cache.find((m) => m.displayName.toLowerCase() === args.join("").toLowerCase()) || message.member;
+            }  
+    }
+}
+
+
+
+
+/*const usuario = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find((m) => m.user.tag.toLowerCase() === args.join(" ").toLowerCase()) || message.guild.members.cache.find((m) => m.displayName.toLowerCase() === args.join("").toLowerCase()) || message.member;
         /*
 
 let usuario = message.mentions.users.first() ||
@@ -26,12 +42,3 @@ let usuario = message.mentions.users.first() ||
             client.users.cache.find(x => (args) ? (args.join(" ") == x.tag) : undefined) ||
             message.author; 
             */
-
-           const embed = new MessageEmbed()
-           .setImage(usuario.user.displayAvatarURL({dynamic: true, size: 1024}))
-           .setColor(usuario.displayHexColor)
-           
-           
-         message.channel.send({embed: embed});
-    }
-}

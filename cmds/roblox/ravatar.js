@@ -13,10 +13,6 @@ module.exports = {
 
     run: async (client, message, args) => {
         try {
-            
-            message.channel.startTyping(5000)
-            message.channel.stopTyping(5000)
-
         let RobloxUser = args.join(" ");
         if (!RobloxUser) {
             const embed = new MessageEmbed()
@@ -76,12 +72,7 @@ message.channel.send('<:correcto:755576359329464350> **Avatar del usuario:** `'+
 
 
 } catch (error) {
-    const embed = new MessageEmbed()
-            .setDescription("<:esperando:755652706873507860> ¡Oops! No existe ese jugador.")
-            .setColor("RED")
-    message.channel.send(embed).then(m => {
-        m.delete({timeout: 10000});
-    })
+    message.channel.send("Ese usuario no existe.")
 }
     }
 }

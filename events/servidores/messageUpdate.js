@@ -5,12 +5,12 @@ module.exports = async (client, oldMessage, newMessage) => {
     if (mensaje) {
         await dsnipeDB.updateOne({
             direccion : newMessage.channel.id,
-            autor : newMessage.author.username,
+            usuarioAutor : newMessage.author.username,
             antes : oldMessage.content,
             despues : newMessage.content,
         });
     } else {
-        let nuevo = new dsnipeDB({direccion: newMessage.channel.id, autor: newMessage.author.username, antes: oldMessage.content, despues: newMessage.content})
+        let nuevo = new dsnipeDB({direccion: newMessage.channel.id, usuarioAutor: newMessage.author.username, antes: oldMessage.content, despues: newMessage.content})
 
         await nuevo.save()
     }

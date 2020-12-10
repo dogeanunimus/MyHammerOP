@@ -17,7 +17,7 @@ module.exports = {
 
 
       const embed = new MessageEmbed()
-      .setAuthor(`Autor: ${snipe.autor}`, message.author.displayAvatarURL({dynamic: true}))
+      .setAuthor(`Autor: ${snipe.autorEliminado}`, message.author.displayAvatarURL({dynamic: true}))
       .setDescription(snipe.mensaje !== "" ? snipe.mensaje : "No puedo mostrar el mensaje solicitado porque es una imagen.")
       .setColor("BLUE")
       .setFooter(client.user.tag, client.user.displayAvatarURL())

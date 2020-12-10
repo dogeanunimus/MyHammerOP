@@ -4,13 +4,14 @@ const snipeDB = require('../../databases/models/snipemessages.js');
 module.exports = {
     config: {
         nombre: "verdb",
-        alias: ["verbase"]
+        alias: ["si"]
     },
 
     run: async (client, message, args) => {
 let ver = await eddsnipeDB.deleteMany()
 console.log(ver);
-let verr = await snipeDB.deleteMany()
+let verr = await snipeDB.deleteMany();
+
 
     }
 }
